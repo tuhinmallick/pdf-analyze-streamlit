@@ -26,9 +26,7 @@ def load_docs(files):
         file_extension = os.path.splitext(file_path.name)[1]
         if file_extension == ".pdf":
             pdf_reader = PyPDF2.PdfReader(file_path)
-            text = ""
-            for page in pdf_reader.pages:
-                text += page.extract_text()
+            text = "".join(page.extract_text() for page in pdf_reader.pages)
             all_text += text
         elif file_extension == ".txt":
             stringio = StringIO(file_path.getvalue().decode("utf-8"))
@@ -94,16 +92,15 @@ def generate_eval(text, N, chunk):
             eval_set.append(qa)
             st.write("Creating Question:",i+1)
         except:
-            st.warning('Error generating question %s.' % str(i+1), icon="⚠️")
-    eval_set_full = list(itertools.chain.from_iterable(eval_set))
-    return eval_set_full
+            st.warning(f'Error generating question {str(i + 1)}.', icon="⚠️")
+    return list(itertools.chain.from_iterable(eval_set))
 
 
 # ...
 
 def main():
     
-    foot = f"""
+    foot = """
     <div style="
         position: fixed;
         bottom: 0;
@@ -118,7 +115,7 @@ def main():
     """
 
     st.markdown(foot, unsafe_allow_html=True)
-    
+
     # Add custom CSS
     st.markdown(
         """
@@ -171,53 +168,52 @@ def main():
     st.sidebar.image("img/logo1.png")
 
 
-   
+
 
     st.write(
-    f"""
+        """
     <div style="display: flex; align-items: center; margin-left: 0;">
         <h1 style="display: inline-block;">PDF Analyzer</h1>
         <sup style="margin-left:5px;font-size:small; color: green;">beta</sup>
     </div>
     """,
-    unsafe_allow_html=True,
-        )
-    
-    
+        unsafe_allow_html=True,
+    )
+        
+        
 
 
-    
-    
+        
+
     st.sidebar.title("Menu")
-    
+
     embedding_option = st.sidebar.radio(
         "Choose Embeddings", ["OpenAI Embeddings", "HuggingFace Embeddings(slower)"])
 
-    
+
     retriever_type = st.sidebar.selectbox(
         "Choose Retriever", ["SIMILARITY SEARCH", "SUPPORT VECTOR MACHINES"])
 
-    # Use RecursiveCharacterTextSplitter as the default and only text splitter
-    splitter_type = "RecursiveCharacterTextSplitter"
-
-    if 'openai_api_key' not in st.session_state:
-        openai_api_key = st.text_input(
-            'Please enter your OpenAI API key or [get one here](https://platform.openai.com/account/api-keys)', value="", placeholder="Enter the OpenAI API key which begins with sk-")
-        if openai_api_key:
-            st.session_state.openai_api_key = openai_api_key
-            os.environ["OPENAI_API_KEY"] = openai_api_key
-        else:
-            #warning_text = 'Please enter your OpenAI API key. Get yours from here: [link](https://platform.openai.com/account/api-keys)'
-            #warning_html = f'<span>{warning_text}</span>'
-            #st.markdown(warning_html, unsafe_allow_html=True)
-            return
-    else:
+    if 'openai_api_key' in st.session_state:
         os.environ["OPENAI_API_KEY"] = st.session_state.openai_api_key
 
-    uploaded_files = st.file_uploader("Upload a PDF or TXT Document", type=[
-                                      "pdf", "txt"], accept_multiple_files=True)
-
-    if uploaded_files:
+    elif openai_api_key := st.text_input(
+        'Please enter your OpenAI API key or [get one here](https://platform.openai.com/account/api-keys)',
+        value="",
+        placeholder="Enter the OpenAI API key which begins with sk-",
+    ):
+        st.session_state.openai_api_key = openai_api_key
+        os.environ["OPENAI_API_KEY"] = openai_api_key
+    else:
+        #warning_text = 'Please enter your OpenAI API key. Get yours from here: [link](https://platform.openai.com/account/api-keys)'
+        #warning_html = f'<span>{warning_text}</span>'
+        #st.markdown(warning_html, unsafe_allow_html=True)
+        return
+    if uploaded_files := st.file_uploader(
+        "Upload a PDF or TXT Document",
+        type=["pdf", "txt"],
+        accept_multiple_files=True,
+    ):
         # Check if last_uploaded_files is not in session_state or if uploaded_files are different from last_uploaded_files
         if 'last_uploaded_files' not in st.session_state or st.session_state.last_uploaded_files != uploaded_files:
             st.session_state.last_uploaded_files = uploaded_files
@@ -228,6 +224,9 @@ def main():
         loaded_text = load_docs(uploaded_files)
         st.write("Documents uploaded and processed.")
 
+        # Use RecursiveCharacterTextSplitter as the default and only text splitter
+        splitter_type = "RecursiveCharacterTextSplitter"
+
         # Split the document into chunks
         splits = split_texts(loaded_text, chunk_size=1000,
                              overlap=0, split_method=splitter_type)
@@ -236,8 +235,6 @@ def main():
         num_chunks = len(splits)
         st.write(f"Number of text chunks: {num_chunks}")
 
-        # Embed using OpenAI embeddings
-            # Embed using OpenAI embeddings or HuggingFace embeddings
         if embedding_option == "OpenAI Embeddings":
             embeddings = OpenAIEmbeddings()
         elif embedding_option == "HuggingFace Embeddings(slower)":
@@ -278,9 +275,7 @@ def main():
             # <h4 style="font-size: 14px;">Answer {i + 1}:</h4>
         st.write("Ready to answer questions.")
 
-        # Question and answering
-        user_question = st.text_input("Enter your question:")
-        if user_question:
+        if user_question := st.text_input("Enter your question:"):
             answer = qa.run(user_question)
             st.write("Answer:", answer)
 
