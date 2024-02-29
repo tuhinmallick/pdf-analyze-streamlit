@@ -1,0 +1,224 @@
+repo_name: tuhinmallick/pdf-analyze-streamlit
+report_id: b162b9636a57541521a4e59b516f287d
+version: 0.1
+repo_type: Public
+timestamp: '2024-02-29T20:07:07+00:00'
+requested_by: starmorph
+provider: github
+branch: main
+detected_tools_count: 9
+tools:
+- name: Python
+  description: A clear and powerful object-oriented programming language, comparable
+    to Perl, Ruby, Scheme, or Java.
+  website_url: https://www.python.org
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/993/pUBY5pVj.png
+  detection_source_url: https://github.com/tuhinmallick/pdf-analyze-streamlit
+  detection_source: Repo Metadata
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/tuhinmallick/pdf-analyze-streamlit
+  detection_source: Repo Metadata
+- name: PyPI
+  description: A repository of software for the Python programming language
+  website_url: https://pypi.org/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Hosted Package Repository
+  image_url: https://img.stackshare.io/service/12572/-RIWgodF_400x400.jpg
+  detection_source_url: https://github.com/tuhinmallick/pdf-analyze-streamlit/blob/main/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: mehmetba
+  last_updated_on: 2023-04-19 10:57:06.000000000 Z
+- name: OpenAI
+  description: Creating safe AGI that benefits all
+  website_url: https://openai.com/
+  version: 0.27.0
+  open_source: false
+  hosted_saas: false
+  category: Communications
+  sub_category: Large Language Models
+  image_url: https://img.stackshare.io/service/48786/default_8b1119bcbb159cebebc2f6cfc9cd2e359b169d22.jpg
+  detection_source_url: https://github.com/tuhinmallick/pdf-analyze-streamlit/blob/main/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: mehmetba
+  last_updated_on: 2023-04-19 10:57:06.000000000 Z
+- name: Streamlit
+  description: A Python app framework built specifically for Machine Learning and
+    Data Science teams
+  website_url: https://streamlit.io
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Application Utilities
+  sub_category: Machine Learning Tools
+  image_url: https://img.stackshare.io/service/11393/default_67e251b5860795095fe91618cf3ef8d09257469a.png
+  detection_source_url: https://github.com/tuhinmallick/pdf-analyze-streamlit/blob/main/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: mehmetba
+  last_updated_on: 2023-04-19 10:57:06.000000000 Z
+- name: PyPDF2
+  description: PDF toolkit
+  package_url: https://pypi.org/project/PyPDF2
+  version: 3.0.1
+  license: Other
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/20065/default_bb49fb0188726b8922387d8bb6e9b2cd0c3c0ea9.png
+  detection_source_url: https://github.com/tuhinmallick/pdf-analyze-streamlit/blob/main/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: mehmetba
+  last_updated_on: 2023-04-19 10:57:06.000000000 Z
+  vulnerabilities:
+  - name: pypdf and PyPDF2 possible Infinite Loop when a comment isn't followed by
+      a character
+    cve_id: CVE-2023-36464
+    cve_url: https://github.com/advisories/GHSA-4vvm-4w3v-6mr8
+    detected_date: Jul 1
+    severity: moderate
+    first_patched: 
+- name: langchain
+  description: Building applications with LLMs through composability
+  package_url: https://pypi.org/project/langchain
+  version: 0.0.144
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/package/pypi/image.png
+  detection_source_url: https://github.com/tuhinmallick/pdf-analyze-streamlit/blob/main/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: mehmetba
+  last_updated_on: 2023-04-19 10:57:06.000000000 Z
+  vulnerabilities:
+  - name: LangChain vulnerable to arbitrary code execution
+    cve_id: CVE-2023-38860
+    cve_url: https://github.com/advisories/GHSA-fj32-q626-pjjc
+    detected_date: Dec 8
+    severity: critical
+    first_patched: 
+  - name: langchain Code Injection vulnerability
+    cve_id: CVE-2023-36095
+    cve_url: https://github.com/advisories/GHSA-gwqq-6vq7-5j86
+    detected_date: Dec 8
+    severity: critical
+    first_patched: 0.0.236
+  - name: Langchain SQL Injection vulnerability
+    cve_id: CVE-2023-32785
+    cve_url: https://github.com/advisories/GHSA-8h5w-f6q9-wg35
+    detected_date: Dec 8
+    severity: critical
+    first_patched: 
+  - name: Langchain vulnerable to arbitrary code execution
+    cve_id: CVE-2023-34541
+    cve_url: https://github.com/advisories/GHSA-6643-h7h5-x9wh
+    detected_date: Dec 8
+    severity: critical
+    first_patched: 0.0.247
+  - name: langchain arbitrary code execution vulnerability
+    cve_id: CVE-2023-36258
+    cve_url: https://github.com/advisories/GHSA-2qmj-7962-cjq8
+    detected_date: Dec 8
+    severity: critical
+    first_patched: 0.0.247
+  - name: langchain vulnerable to arbitrary code execution
+    cve_id: CVE-2023-36281
+    cve_url: https://github.com/advisories/GHSA-7gfq-f96f-g85j
+    detected_date: Dec 8
+    severity: critical
+    first_patched: 0.0.312
+  - name: Langchain vulnerable to arbitrary code execution via the evaluate function
+      in the numexpr library
+    cve_id: CVE-2023-39631
+    cve_url: https://github.com/advisories/GHSA-f73w-4m7g-ch9x
+    detected_date: Dec 8
+    severity: critical
+    first_patched: 0.0.308
+  - name: Langchain OS Command Injection vulnerability
+    cve_id: CVE-2023-34540
+    cve_url: https://github.com/advisories/GHSA-x32c-59v5-h7fg
+    detected_date: Dec 8
+    severity: critical
+    first_patched: 0.0.225
+  - name: LangChain vulnerable to arbitrary code execution
+    cve_id: CVE-2023-39659
+    cve_url: https://github.com/advisories/GHSA-prgp-w7vf-ch62
+    detected_date: Dec 8
+    severity: critical
+    first_patched: 0.0.325
+  - name: langchain vulnerable to arbitrary code execution
+    cve_id: CVE-2023-36188
+    cve_url: https://github.com/advisories/GHSA-57fc-8q82-gfp3
+    detected_date: Dec 8
+    severity: critical
+    first_patched: 0.0.236
+  - name: LangChain vulnerable to arbitrary code execution
+    cve_id: CVE-2023-38896
+    cve_url: https://github.com/advisories/GHSA-92j5-3459-qgp4
+    detected_date: Dec 8
+    severity: critical
+    first_patched: 0.0.236
+  - name: Langchain Server-Side Request Forgery vulnerability
+    cve_id: CVE-2023-32786
+    cve_url: https://github.com/advisories/GHSA-6h8p-4hx9-w66c
+    detected_date: Dec 8
+    severity: high
+    first_patched: 0.0.329
+  - name: LangChain Server Side Request Forgery vulnerability
+    cve_id: CVE-2023-46229
+    cve_url: https://github.com/advisories/GHSA-655w-fm8m-m478
+    detected_date: Dec 8
+    severity: high
+    first_patched: 0.0.317
+  - name: langchain SQL Injection vulnerability
+    cve_id: CVE-2023-36189
+    cve_url: https://github.com/advisories/GHSA-7q94-qpjr-xpgm
+    detected_date: Dec 8
+    severity: high
+    first_patched: 
+  - name: langchain Server-Side Request Forgery vulnerability
+    cve_id: CVE-2024-0243
+    cve_url: https://github.com/advisories/GHSA-h9j7-5xvc-qhg5
+    detected_date: Feb 27
+    severity: low
+    first_patched: 0.1.0
+- name: openai
+  description: The official Python library for the openai API
+  package_url: https://pypi.org/project/openai
+  version: 0.27.0
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/package/pypi/image.png
+  detection_source_url: https://github.com/tuhinmallick/pdf-analyze-streamlit/blob/main/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: mehmetba
+  last_updated_on: 2023-04-19 11:00:08.000000000 Z
+- name: scikit-learn
+  description: A set of python modules for machine learning and data mining
+  package_url: https://pypi.org/project/scikit-learn
+  version: 1.2.2
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19898/default_4343f8bba4f6051641ffca8b4fbe9b099402c84d.png
+  detection_source_url: https://github.com/tuhinmallick/pdf-analyze-streamlit/blob/main/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: Mehmet Balioglu
+  last_updated_on: 2023-04-25 19:58:16.000000000 Z
