@@ -28,7 +28,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [tuhinmallick/pdf-analyze-streamlit](https://github.com/tuhinmallick/pdf-analyze-streamlit)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|9<br/>Tools used|02/19/24 <br/>Report generated|
+|9<br/>Tools used|02/29/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -95,7 +95,7 @@ Full tech stack [here](/techstack.md)
 |NAME|VERSION|LAST UPDATED|LAST UPDATED BY|LICENSE|VULNERABILITIES|
 |:------|:------|:------|:------|:------|:------|
 |[PyPDF2](https://pypi.org/project/PyPDF2)|v3.0.1|04/19/23|mehmetba |Other|[CVE-2023-36464](https://github.com/advisories/GHSA-4vvm-4w3v-6mr8) (Moderate)|
-|[langchain](https://pypi.org/project/langchain)|v0.0.144|04/19/23|mehmetba |N/A|[CVE-2023-39659](https://github.com/advisories/GHSA-prgp-w7vf-ch62) (Critical)<br/>[CVE-2023-38896](https://github.com/advisories/GHSA-92j5-3459-qgp4) (Critical)<br/>[CVE-2023-38860](https://github.com/advisories/GHSA-fj32-q626-pjjc) (Critical)<br/>[CVE-2023-36095](https://github.com/advisories/GHSA-gwqq-6vq7-5j86) (Critical)<br/>[CVE-2023-32785](https://github.com/advisories/GHSA-8h5w-f6q9-wg35) (Critical)<br/>[CVE-2023-34541](https://github.com/advisories/GHSA-6643-h7h5-x9wh) (Critical)<br/>[CVE-2023-36258](https://github.com/advisories/GHSA-2qmj-7962-cjq8) (Critical)<br/>[CVE-2023-36281](https://github.com/advisories/GHSA-7gfq-f96f-g85j) (Critical)<br/>[CVE-2023-39631](https://github.com/advisories/GHSA-f73w-4m7g-ch9x) (Critical)<br/>[CVE-2023-34540](https://github.com/advisories/GHSA-x32c-59v5-h7fg) (Critical)<br/>[CVE-2023-36188](https://github.com/advisories/GHSA-57fc-8q82-gfp3) (Critical)<br/>[CVE-2023-46229](https://github.com/advisories/GHSA-655w-fm8m-m478) (High)<br/>[CVE-2023-36189](https://github.com/advisories/GHSA-7q94-qpjr-xpgm) (High)<br/>[CVE-2023-32786](https://github.com/advisories/GHSA-6h8p-4hx9-w66c) (High)|
+|[langchain](https://pypi.org/project/langchain)|v0.0.144|04/19/23|mehmetba |N/A|[CVE-2023-38860](https://github.com/advisories/GHSA-fj32-q626-pjjc) (Critical)<br/>[CVE-2023-36095](https://github.com/advisories/GHSA-gwqq-6vq7-5j86) (Critical)<br/>[CVE-2023-32785](https://github.com/advisories/GHSA-8h5w-f6q9-wg35) (Critical)<br/>[CVE-2023-34541](https://github.com/advisories/GHSA-6643-h7h5-x9wh) (Critical)<br/>[CVE-2023-36258](https://github.com/advisories/GHSA-2qmj-7962-cjq8) (Critical)<br/>[CVE-2023-36281](https://github.com/advisories/GHSA-7gfq-f96f-g85j) (Critical)<br/>[CVE-2023-39631](https://github.com/advisories/GHSA-f73w-4m7g-ch9x) (Critical)<br/>[CVE-2023-34540](https://github.com/advisories/GHSA-x32c-59v5-h7fg) (Critical)<br/>[CVE-2023-39659](https://github.com/advisories/GHSA-prgp-w7vf-ch62) (Critical)<br/>[CVE-2023-36188](https://github.com/advisories/GHSA-57fc-8q82-gfp3) (Critical)<br/>[CVE-2023-38896](https://github.com/advisories/GHSA-92j5-3459-qgp4) (Critical)<br/>[CVE-2023-32786](https://github.com/advisories/GHSA-6h8p-4hx9-w66c) (High)<br/>[CVE-2023-46229](https://github.com/advisories/GHSA-655w-fm8m-m478) (High)<br/>[CVE-2023-36189](https://github.com/advisories/GHSA-7q94-qpjr-xpgm) (High)<br/>[CVE-2024-0243](https://github.com/advisories/GHSA-h9j7-5xvc-qhg5) (Low)|
 |[openai](https://pypi.org/project/openai)|v0.27.0|04/19/23|mehmetba |N/A|N/A|
 |[scikit-learn](https://pypi.org/project/scikit-learn)|v1.2.2|04/25/23|Mehmet Balioglu |BSD-3-Clause|N/A|
 
