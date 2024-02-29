@@ -2,7 +2,7 @@ repo_name: tuhinmallick/pdf-analyze-streamlit
 report_id: b162b9636a57541521a4e59b516f287d
 version: 0.1
 repo_type: Public
-timestamp: '2024-02-19T00:17:00+00:00'
+timestamp: '2024-02-29T20:07:07+00:00'
 requested_by: starmorph
 provider: github
 branch: main
@@ -105,18 +105,6 @@ tools:
   last_updated_on: 2023-04-19 10:57:06.000000000 Z
   vulnerabilities:
   - name: LangChain vulnerable to arbitrary code execution
-    cve_id: CVE-2023-39659
-    cve_url: https://github.com/advisories/GHSA-prgp-w7vf-ch62
-    detected_date: Dec 8
-    severity: critical
-    first_patched: 0.0.325
-  - name: LangChain vulnerable to arbitrary code execution
-    cve_id: CVE-2023-38896
-    cve_url: https://github.com/advisories/GHSA-92j5-3459-qgp4
-    detected_date: Dec 8
-    severity: critical
-    first_patched: 0.0.236
-  - name: LangChain vulnerable to arbitrary code execution
     cve_id: CVE-2023-38860
     cve_url: https://github.com/advisories/GHSA-fj32-q626-pjjc
     detected_date: Dec 8
@@ -165,12 +153,30 @@ tools:
     detected_date: Dec 8
     severity: critical
     first_patched: 0.0.225
+  - name: LangChain vulnerable to arbitrary code execution
+    cve_id: CVE-2023-39659
+    cve_url: https://github.com/advisories/GHSA-prgp-w7vf-ch62
+    detected_date: Dec 8
+    severity: critical
+    first_patched: 0.0.325
   - name: langchain vulnerable to arbitrary code execution
     cve_id: CVE-2023-36188
     cve_url: https://github.com/advisories/GHSA-57fc-8q82-gfp3
     detected_date: Dec 8
     severity: critical
     first_patched: 0.0.236
+  - name: LangChain vulnerable to arbitrary code execution
+    cve_id: CVE-2023-38896
+    cve_url: https://github.com/advisories/GHSA-92j5-3459-qgp4
+    detected_date: Dec 8
+    severity: critical
+    first_patched: 0.0.236
+  - name: Langchain Server-Side Request Forgery vulnerability
+    cve_id: CVE-2023-32786
+    cve_url: https://github.com/advisories/GHSA-6h8p-4hx9-w66c
+    detected_date: Dec 8
+    severity: high
+    first_patched: 0.0.329
   - name: LangChain Server Side Request Forgery vulnerability
     cve_id: CVE-2023-46229
     cve_url: https://github.com/advisories/GHSA-655w-fm8m-m478
@@ -183,12 +189,12 @@ tools:
     detected_date: Dec 8
     severity: high
     first_patched: 
-  - name: Langchain Server-Side Request Forgery vulnerability
-    cve_id: CVE-2023-32786
-    cve_url: https://github.com/advisories/GHSA-6h8p-4hx9-w66c
-    detected_date: Dec 8
-    severity: high
-    first_patched: 0.0.329
+  - name: langchain Server-Side Request Forgery vulnerability
+    cve_id: CVE-2024-0243
+    cve_url: https://github.com/advisories/GHSA-h9j7-5xvc-qhg5
+    detected_date: Feb 27
+    severity: low
+    first_patched: 0.1.0
 - name: openai
   description: The official Python library for the openai API
   package_url: https://pypi.org/project/openai
